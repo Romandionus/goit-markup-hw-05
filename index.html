@@ -53,7 +53,7 @@
         <section class="main-page">
             <div class="container main-page-container">
                 <h1 class="main-page-topic">Эффективные решения для вашего бизнеса</h1>
-                <button type="button" class="button-order">Заказать услугу</button>
+                <button type="button" class="button-order" data-modal-open>Заказать услугу</button>
             </div>
         </section>
         <!--чем мы занимаемся -->
@@ -106,12 +106,18 @@
             <div class="container">
                 <h2 class="what-we-do-topic">Чем мы занимаемся</h2>
                 <ul class="list what-we-do-topic-list">
-                    <li class="what-we-do-topic-img"><img src="./images/box1.jpg" width="370" height="294"
-                            alt="writing code"></li>
-                    <li class="what-we-do-topic-img"><img src="./images/box2.jpg" width="370" height="294"
-                            alt="laptop smartphones"></li>
-                    <li class="what-we-do-topic-img"><img src="./images/box3.jpg" width="370" height="294"
-                            alt="color chart"></li>
+                    <li class="what-we-do-topic-img"><div class="what-we-do-wrap"><img src="./images/box1.jpg" width="370" height="294"
+                            alt="writing code"><p class="what-we-do-image-description">ДЕСКТОПНЫЕ ПРИЛОЖЕНИЯ</p></div></li>
+                    <li class="what-we-do-topic-img">
+                        <div class="what-we-do-wrap"><img src="./images/box2.jpg" width="370" height="294" alt="laptop smartphones">
+                            <p class="what-we-do-image-description">МОБИЛЬНЫЕ ПРИЛОЖЕНИЯ</p>
+                        </div>
+                    </li>
+                    <li class="what-we-do-topic-img">
+                        <div class="what-we-do-wrap"><img src="./images/box3.jpg" width="370" height="294" alt="color chart">
+                            <p class="what-we-do-image-description">ДИЗАЙНЕРСКИЕ РЕШЕНИЯ</p>
+                        </div>
+                    </li>
                 </ul>
             </div>
         </section>
@@ -327,6 +333,17 @@
         </div>
     </div>
     </footer>
+    <div class="backdrop is-hidden" data-modal>
+        <div class="modal">
+            <button type="button" class="modal-btn" data-modal-close>
+<svg class="modal-close-icon" width="18px" height="18px">
+    <use href="./images/sprite.svg#icon-close-black"></use>
+</svg>
+
+            </button>
+        </div>
+    </div>
 </body>
+<script src="./js/model.js"></script>
 
 </html>

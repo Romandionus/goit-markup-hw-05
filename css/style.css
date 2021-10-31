@@ -43,7 +43,9 @@ ul {
   --icon-color-dark: rgba(255, 255, 255, 0.1);
   --shadow-all--: 0px 3px 2px rgba(0, 0, 0, 0.12),
     0px 1px 2px rgba(0, 0, 0, 0.14), 0px 2px 2px rgba(0, 0, 0, 0.2);
-  --backgroudn-image-text-color: rgba(33, 150, 243, 0.9);
+  --background-image-text-color: rgba(33, 150, 243, 0.9);
+  --background-backdrop: rgba(0, 0, 0, 0.2);
+  --backgroudn-image-text-color-two: rgba(47, 48, 58, 0.8);
 }
 
 body {
@@ -176,6 +178,21 @@ body {
 
 .list .link.current {
   color: var(--background-text-color);
+}
+
+.nav-link {
+  position: relative;
+}
+
+.link.current::after {
+  display: block;
+  content: "";
+  width: 100%;
+  height: 4px;
+  position: absolute;
+  border-radius: 2px;
+  bottom: 1px;
+  background-color: var(--background-text-color);
 }
 
 /* ссылки контактов */
@@ -567,6 +584,49 @@ body {
   fill: var(--icon-color-active);
 }
 
+.backdrop {
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--background-backdrop);
+  position: fixed;
+  top: 0;
+  transition: opasity 250ms linear, visibility 250ms linear;
+}
+
+.modal {
+  position: absolute;
+  width: 528px;
+  height: 581px;
+  background-color: #ffffff;
+  border-radius: 4px;
+  box-shadow: var(--shadow-all--);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.modal-btn {
+  cursor: pointer;
+  fill: var(--third-text-color);
+  border: 1px solid #999;
+  background-color: transparent;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.backdrop.is-hidden {
+  visibility: hidden;
+  orphans: 0;
+  pointer-events: none;
+}
+
 /* портфолио */
 .btn {
   cursor: pointer;
@@ -631,10 +691,32 @@ body {
 .container-list-filter-item:hover .portfolio-image-description {
   transform: translateY(0);
 }
+.what-we-do-wrap {
+  position: relative;
+  overflow: visible;
+}
 
 .filter-list-wrap {
   position: relative;
   overflow: hidden;
+}
+
+.what-we-do-image-description {
+  font-size: 14px;
+  line-height: 1.14;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  color: var(--header-color);
+  background-color: var(--backgroudn-image-text-color-two);
+  padding-top: 27px;
+  padding-bottom: 27px;
+  padding-left: 83px;
+  padding-right: 82px;
+  width: 100%;
+  height: 70px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
 }
 
 .portfolio-image-description {
@@ -642,7 +724,7 @@ body {
   line-height: 1.55;
   letter-spacing: 0.03em;
   color: var(--header-color);
-  background-color: var(--backgroudn-image-text-color);
+  background-color: var(--background-image-text-color);
   padding-top: 64px;
   padding-bottom: 64px;
   padding-left: 24px;
