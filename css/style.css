@@ -43,6 +43,7 @@ ul {
   --icon-color-dark: rgba(255, 255, 255, 0.1);
   --shadow-all--: 0px 3px 2px rgba(0, 0, 0, 0.12),
     0px 1px 2px rgba(0, 0, 0, 0.14), 0px 2px 2px rgba(0, 0, 0, 0.2);
+  --backgroudn-image-text-color: rgba(33, 150, 243, 0.9);
 }
 
 body {
@@ -576,7 +577,6 @@ body {
   border-radius: 4px;
   border: none;
   padding: 6px 22px;
-  transition: color 300ms linear, background-color 300ms, linear;
 }
 
 .btn-container-list {
@@ -627,6 +627,34 @@ body {
   margin-bottom: 30px;
   outline: 1px solid var(--background-border-color-one);
 }
+
+.container-list-filter-item:hover .portfolio-image-description {
+  transform: translateY(0);
+}
+
+.filter-list-wrap {
+  position: relative;
+  overflow: hidden;
+}
+
+.portfolio-image-description {
+  font-size: 18px;
+  line-height: 1.55;
+  letter-spacing: 0.03em;
+  color: var(--header-color);
+  background-color: var(--backgroudn-image-text-color);
+  padding-top: 64px;
+  padding-bottom: 64px;
+  padding-left: 24px;
+  padding-right: 24px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateY(100%);
+  transition: transform 300ms linear;
+}
+
 .container-list-filter-link {
   display: block;
   text-decoration: none;
