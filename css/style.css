@@ -156,10 +156,12 @@ body {
 
 .link:hover {
   color: var(--background-text-color);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .link:focus {
   color: var(--background-text-color);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .link:hover .mail-icon,
@@ -167,13 +169,16 @@ body {
 .link:focus .tel-icon,
 .link:hover .tel-icon {
   fill: var(--background-text-color);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .link:hover .mail-icon {
   fill: var(--background-text-color);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .link:focus .mail-icon {
   fill: var(--background-text-color);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .list .link.current {
@@ -419,10 +424,12 @@ body {
 .social-link:hover,
 .social-link:focus {
   background-color: var(--background-text-color);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .social-link:hover .social-icon,
 .social-link:focus .social-icon {
   fill: var(--icon-color-active);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .our-team-topic-item {
@@ -484,6 +491,7 @@ body {
 .customers-back:focus,
 .customers-back:hover {
   border-color: var(--background-text-color);
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .customers-link {
@@ -502,6 +510,7 @@ body {
 .customers-link:hover .customers-icon,
 .customers-link:focus .customers-icon {
   fill: var(--background-text-color);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* футер */
@@ -578,10 +587,12 @@ body {
 .social-link-dark:hover,
 .social-link-dark:focus {
   background-color: var(--background-text-color);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .social-link-dark:hover .social-icon,
 .social-link-dark:focus .social-icon {
   fill: var(--icon-color-active);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .backdrop {
@@ -623,7 +634,7 @@ body {
 
 .backdrop.is-hidden {
   visibility: hidden;
-  orphans: 0;
+  orphans: 2;
   pointer-events: none;
 }
 
@@ -655,6 +666,8 @@ body {
   background-color: var(--background-text-color);
   color: var(--header-color);
   box-shadow: var(--shadow-all--);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .btn-container-item {
@@ -690,6 +703,7 @@ body {
 
 .container-list-filter-item:hover .portfolio-image-description {
   transform: translateY(0);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .what-we-do-wrap {
   position: relative;
@@ -745,10 +759,12 @@ body {
 .container-list-filter-item:focus {
   cursor: pointer;
   box-shadow: var(--shadow-all--);
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .container-list-filter-link:focus {
   box-shadow: var(--shadow-all--);
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .container-list-filter-item-description {
